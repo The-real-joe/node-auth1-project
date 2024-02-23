@@ -6,6 +6,7 @@
     "server": "nodemon index.js",
     "test": "cross-env NODE_ENV=testing jest --verbose --runInBand",
     "migrate": "knex migrate:latest",
+    "tester": "jest --detectOpenHandles",
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run"
   },
@@ -21,11 +22,14 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "connect-session-knex": "^4.0.0",
     "cors": "^2.8.5",
-    "express": "^4.18.1",
-    "helmet": "^5.0.2",
-    "knex": "^2.0.0",
-    "sqlite3": "^5.0.8"
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "helmet": "^5.1.1",
+    "knex": "^2.5.1",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.7"
   },
   "repository": {
     "type": "git",
